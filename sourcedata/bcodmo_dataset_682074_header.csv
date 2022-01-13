@@ -1,0 +1,221 @@
+*GLOBAL*,Conventions,"COARDS, CF-1.6, ACDD-1.3, NCCSV-1.0"
+*GLOBAL*,access_formats,".htmlTable,.csv,.json,.mat,.nc,.tsv,.esriCsv,.geoJson,.odvTxt"
+*GLOBAL*,acquisition_description,"We conducted day/night paired zooplankton sampling in Hood Canal in June-\nOctober, 2012 and 2013. Sampling stations included Dabob, Union, Hoodsport,\nDuckabush, and Twanoh. A Hydrobios MultiNet (five-net capacity) was used to\ncollect depth-stratified and full water column samples. Net mouth area was\n0.25 m2; 200- and 335-um mesh nets were used to sample different size\nzooplankton. Nets were towed obliquely at 1-2.5 knots (slower tows for smaller\nmesh size), with inner and outer flow meters to measure water volume sampled.\nFor the depth-stratified sampling, depth layers were based on the dissolved\noxygen profiles from CTD casts.\n \nIn the laboratory, zooplankton were quantitatively subsampled and\nmicroscopically counted. All individuals were identified to species or larger\ntaxonomic grouping, and by life stages for some species, within each sample."
+*GLOBAL*,awards_0_award_nid,"557503"
+*GLOBAL*,awards_0_award_number,OCE-1154648
+*GLOBAL*,awards_0_data_url,http://www.nsf.gov/awardsearch/showAward.do?AwardNumber=1154648
+*GLOBAL*,awards_0_funder_name,NSF Division of Ocean Sciences
+*GLOBAL*,awards_0_funding_acronym,NSF OCE
+*GLOBAL*,awards_0_funding_source_nid,"355"
+*GLOBAL*,awards_0_program_manager,Dr David  L. Garrison
+*GLOBAL*,awards_0_program_manager_nid,"50534"
+*GLOBAL*,cdm_data_type,Other
+*GLOBAL*,comment,Zooplankton Densities \n  J. Keister et al. \n  Version 8 February 2017
+*GLOBAL*,creator_email,info@bco-dmo.org
+*GLOBAL*,creator_name,BCO-DMO
+*GLOBAL*,creator_type,institution
+*GLOBAL*,creator_url,https://www.bco-dmo.org/
+*GLOBAL*,data_source,extract_data_as_tsv version 2.2d  13 Jun 2019
+*GLOBAL*,date_created,2017-02-11T00:19:13Z
+*GLOBAL*,date_modified,2019-04-04T16:46:00Z
+*GLOBAL*,defaultDataQuery,&time
+*GLOBAL*,doi,10.1575/1912/bco-dmo.682074.1
+*GLOBAL*,Easternmost_Easting,-122.807d
+*GLOBAL*,geospatial_lat_max,47.812d
+*GLOBAL*,geospatial_lat_min,47.371d
+*GLOBAL*,geospatial_lat_units,degrees_north
+*GLOBAL*,geospatial_lon_max,-122.807d
+*GLOBAL*,geospatial_lon_min,-123.125d
+*GLOBAL*,geospatial_lon_units,degrees_east
+*GLOBAL*,infoUrl,https://www.bco-dmo.org/dataset/682074
+*GLOBAL*,institution,BCO-DMO
+*GLOBAL*,instruments_0_acronym,SBE-43 DO
+*GLOBAL*,instruments_0_dataset_instrument_nid,"682096"
+*GLOBAL*,instruments_0_description,The Sea-Bird SBE 43 dissolved oxygen sensor is a redesign of the Clark polarographic membrane type of dissolved oxygen sensors. more information from Sea-Bird Electronics
+*GLOBAL*,instruments_0_instrument_external_identifier,https://vocab.nerc.ac.uk/collection/L22/current/TOOL0036/
+*GLOBAL*,instruments_0_instrument_name,Sea-Bird SBE 43 Dissolved Oxygen Sensor
+*GLOBAL*,instruments_0_instrument_nid,"552"
+*GLOBAL*,instruments_0_supplied_name,SBE 43
+*GLOBAL*,instruments_1_acronym,MultiNet
+*GLOBAL*,instruments_1_dataset_instrument_description,Used to collect water column samples
+*GLOBAL*,instruments_1_dataset_instrument_nid,"682100"
+*GLOBAL*,instruments_1_description,"The MultiNet\ufffd Multiple Plankton Sampler is designed as a  sampling system for horizontal and vertical collections in successive water layers. Equipped with 5 or 9 net bags, the MultiNet\ufffd can be delivered in 3 sizes (apertures) : Mini (0.125 m2), Midi (0.25 m2) and Maxi (0.5 m2). The system consists of a shipboard Deck Command Unit and a stainless steel frame to which 5 (or 9) net bags are attached by means of zippers to canvas. The net bags are opened and closed by means of an arrangement of levers that are triggered by a battery powered Motor Unit. The commands for actuation of the net bags are given via single or multi-conductor cable between the Underwater Unit and the Deck Command Unit.  Although horizontal collections typically use a mesh size of 300 microns, mesh sizes from 100 to 500 may also be used. Vertical collections are also common.  The shipboard Deck Command Unit displays all relevant system data, including the actual operating depth of the net system."
+*GLOBAL*,instruments_1_instrument_external_identifier,https://vocab.nerc.ac.uk/collection/L22/current/NETT0099/
+*GLOBAL*,instruments_1_instrument_name,MultiNet
+*GLOBAL*,instruments_1_instrument_nid,"559"
+*GLOBAL*,instruments_1_supplied_name,Hydrobios MultiNet (five-net capacity)
+*GLOBAL*,keywords,"bco, bco-dmo, biological, biology, chemical, code, data, dataset, date, day, day_night, density, depth, depth_max, depth_min, dmo, erddap, fwc, FWC_DS, history, identifier, iso, ISO_DateTime_UTC, latitude, life, life_history_stage, longitude, management, mesh, mesh_size, night, oceanography, office, physical, physical oceanography, preliminary, sample, sample_code, size, species, stage, start, station, taxonomy, time, time_start"
+*GLOBAL*,license,"The data may be used and redistributed for free but is not intended\nfor legal use, since it may contain inaccuracies. Neither the data\nContributor, ERD, NOAA, nor the United States Government, nor any\nof their employees or contractors, makes any warranty, express or\nimplied, including warranties of merchantability and fitness for a\nparticular purpose, or assumes any legal liability for the accuracy,\ncompleteness, or usefulness, of this information."
+*GLOBAL*,metadata_source,https://www.bco-dmo.org/api/dataset/682074
+*GLOBAL*,Northernmost_Northing,47.812d
+*GLOBAL*,param_mapping,"{'682074': {'lat': 'master - latitude', 'lon': 'master - longitude', 'ISO_DateTime_UTC': 'master - time'}}"
+*GLOBAL*,parameter_source,https://www.bco-dmo.org/mapserver/dataset/682074/parameters
+*GLOBAL*,people_0_affiliation,University of Washington
+*GLOBAL*,people_0_affiliation_acronym,UW
+*GLOBAL*,people_0_person_name,Dr Julie E. Keister
+*GLOBAL*,people_0_person_nid,"51330"
+*GLOBAL*,people_0_role,Principal Investigator
+*GLOBAL*,people_0_role_type,originator
+*GLOBAL*,people_1_affiliation,University of Washington
+*GLOBAL*,people_1_affiliation_acronym,UW
+*GLOBAL*,people_1_person_name,Dr Timothy Essington
+*GLOBAL*,people_1_person_nid,"557506"
+*GLOBAL*,people_1_role,Co-Principal Investigator
+*GLOBAL*,people_1_role_type,originator
+*GLOBAL*,people_2_affiliation,University of Washington
+*GLOBAL*,people_2_affiliation_acronym,UW
+*GLOBAL*,people_2_person_name,Dr John K. Horne
+*GLOBAL*,people_2_person_nid,"557509"
+*GLOBAL*,people_2_role,Co-Principal Investigator
+*GLOBAL*,people_2_role_type,originator
+*GLOBAL*,people_3_affiliation,Northwest Fisheries Science Center - Seattle
+*GLOBAL*,people_3_affiliation_acronym,NOAA NWFSC
+*GLOBAL*,people_3_person_name,Dr Sandra Parker-Stetter
+*GLOBAL*,people_3_person_nid,"557511"
+*GLOBAL*,people_3_role,Co-Principal Investigator
+*GLOBAL*,people_3_role_type,originator
+*GLOBAL*,people_4_affiliation,University of Washington
+*GLOBAL*,people_4_affiliation_acronym,UW
+*GLOBAL*,people_4_person_name,Dr Julie E. Keister
+*GLOBAL*,people_4_person_nid,"51330"
+*GLOBAL*,people_4_role,Contact
+*GLOBAL*,people_4_role_type,related
+*GLOBAL*,people_5_affiliation,Woods Hole Oceanographic Institution
+*GLOBAL*,people_5_affiliation_acronym,WHOI BCO-DMO
+*GLOBAL*,people_5_person_name,Hannah Ake
+*GLOBAL*,people_5_person_nid,"650173"
+*GLOBAL*,people_5_role,BCO-DMO Data Manager
+*GLOBAL*,people_5_role_type,related
+*GLOBAL*,project,Consequences of hypoxia on food web linkages in a pelagic marine ecosystem
+*GLOBAL*,projects_0_acronym,PelagicHypoxia
+*GLOBAL*,projects_0_description,"Description from NSF award abstract:\nLow dissolved oxygen (hypoxia) is one of the most pronounced, pervasive, and significant disturbances in marine ecosystems. Yet, our understanding of the ecological impacts of hypoxia on pelagic food webs is incomplete because of our limited knowledge of how organism responses to hypoxia affect critical ecosystem processes. In pelagic food webs, distribution shifts of mesozooplankton and their predators may affect predator-prey overlap and dictate energy flow up food webs. Similarly, hypoxia may induce shifts in zooplankton community composition towards species that impede energy flow to planktivorous fish. However, compensatory responses by species and communities might negate these effects, maintaining trophic coupling and sustaining productivity of upper trophic level species. The PIs propose to answer the question ""Does hypoxia affect energy flow from mesozooplankton to pelagic fish?"" They approach this question with a nested framework of hypotheses that considers two sets of processes alternatively responsible for either changes or maintenance of pelagic ecosystem energy flows. They will conduct their study in the Hood Canal, WA. Unlike most hypoxia-impacted estuaries, hypoxic regions of Hood Canal are in close proximity to sites that are not affected. This makes it logistically easier to conduct a comparative study and reduces the number of potential confounding factors when comparing areas that are far apart.\nImproved understanding of how hypoxia impacts marine ecosystems will benefit the practical application of ecosystem-based management (EBM) in coastal and estuarine ecosystems. Effective application of EBM requires that the impacts of human activities are well understood and that ecological effects can be tracked using indicators. This project will contribute to both of these needs. The PIs will share their findings on local and national levels with Federal, State, Tribal, and County biologists. To increase exposure of science to underrepresented groups, the PIs also will provide Native American youth with opportunities to participate in field collections and laboratory processing through summer internships. The PIs will collaborate with the NSF-funded Pacific Northwest Louis Stokes Alliance for Minority Participation and tribes from the Hood Canal region to recruit and mentor students for potential careers in marine science. This project will support several undergraduate researchers, two Ph.D. students, a post-doc, and two early-career scientists."
+*GLOBAL*,projects_0_end_date,"2016-05"
+*GLOBAL*,projects_0_geolocation,"Puget Sound, WA (47 N, 123 W)"
+*GLOBAL*,projects_0_name,Consequences of hypoxia on food web linkages in a pelagic marine ecosystem
+*GLOBAL*,projects_0_project_nid,"557504"
+*GLOBAL*,projects_0_start_date,"2012-06"
+*GLOBAL*,publisher_name,Hannah Ake
+*GLOBAL*,publisher_role,BCO-DMO Data Manager(s)
+*GLOBAL*,sourceUrl,(local files)
+*GLOBAL*,Southernmost_Northing,47.371d
+*GLOBAL*,standard_name_vocabulary,CF Standard Name Table v29
+*GLOBAL*,summary,Zooplankton densities collected from a seasonally hypoxic fjord on R/V Clifford A Barnes cruises from 2012-2013 (Pelagic Hypoxia project)
+*GLOBAL*,time_coverage_start,2012-06-11T14:10:00Z
+*GLOBAL*,title,Zooplankton densities collected from a seasonally hypoxic fjord on R/V Clifford A Barnes cruises from 2012-2013 (Pelagic Hypoxia project)
+*GLOBAL*,version,"1"
+*GLOBAL*,Westernmost_Easting,-123.125d
+*GLOBAL*,xml_source,osprey2erddap.update_xml() v1.5-beta
+station,*DATA_TYPE*,String
+station,description,Station code where sampling occurred; DB=Dabob; UN=Union; HP=Hoodsport; DU=Duckabush; TW=Twanoh.
+station,ioos_category,Identifier
+station,long_name,Station
+station,units,unitless
+latitude,*DATA_TYPE*,double
+latitude,_CoordinateAxisType,Lat
+latitude,_FillValue,NaNd
+latitude,actual_range,47.371d,47.812d
+latitude,axis,Y
+latitude,colorBarMaximum,90.0d
+latitude,colorBarMinimum,-90.0d
+latitude,description,Latitude; N is positive
+latitude,ioos_category,Location
+latitude,long_name,Latitude
+latitude,standard_name,latitude
+latitude,units,degrees_north
+longitude,*DATA_TYPE*,double
+longitude,_CoordinateAxisType,Lon
+longitude,_FillValue,NaNd
+longitude,actual_range,-123.125d,-122.807d
+longitude,axis,X
+longitude,colorBarMaximum,180.0d
+longitude,colorBarMinimum,-180.0d
+longitude,description,Longitude; S is positive
+longitude,ioos_category,Location
+longitude,long_name,Longitude
+longitude,standard_name,longitude
+longitude,units,degrees_east
+day_night,*DATA_TYPE*,String
+day_night,description,Indication of whether sampling occurred at day or night.
+day_night,ioos_category,Time
+day_night,long_name,Day Night
+day_night,units,unitless
+species,*DATA_TYPE*,String
+species,description,Species sampled
+species,ioos_category,Taxonomy
+species,long_name,Species
+species,units,unitless
+date,*DATA_TYPE*,int
+date,_FillValue,2147483647i
+date,actual_range,20120611i,20131003i
+date,description,Date sample was collected; Local time (PDT); YYYYMMDD
+date,ioos_category,Time
+date,long_name,Date
+date,units,unitless
+time_start,*DATA_TYPE*,String
+time_start,description,Start time of sampling; HH:MM
+time_start,ioos_category,Time
+time_start,long_name,Time Start
+time_start,units,unitless
+life_history_stage,*DATA_TYPE*,String
+life_history_stage,description,Description of life history stage at which sample was found
+life_history_stage,ioos_category,Biology
+life_history_stage,long_name,Life History Stage
+life_history_stage,units,unitless
+sample_code,*DATA_TYPE*,String
+sample_code,description,PI issued sample ID; sampling date + Station + D (day ) or N (night)  + Net code (e.g. m1) _mesh
+sample_code,ioos_category,Unknown
+sample_code,long_name,Sample Code
+sample_code,units,unitless
+mesh_size,*DATA_TYPE*,short
+mesh_size,_FillValue,32767s
+mesh_size,actual_range,200s,335s
+mesh_size,description,Size of mesh used in sampling.
+mesh_size,ioos_category,Unknown
+mesh_size,long_name,Mesh Size
+mesh_size,units,microns
+depth_max,*DATA_TYPE*,float
+depth_max,_FillValue,NaNf
+depth_max,actual_range,5.0f,165.0f
+depth_max,colorBarMaximum,8000.0d
+depth_max,colorBarMinimum,-8000.0d
+depth_max,colorBarPalette,TopographyDepth
+depth_max,description,Maximum depth sampled.
+depth_max,ioos_category,Location
+depth_max,long_name,Depth
+depth_max,standard_name,depth
+depth_max,units,meters
+depth_min,*DATA_TYPE*,float
+depth_min,_FillValue,NaNf
+depth_min,actual_range,0.0f,90.0f
+depth_min,colorBarMaximum,8000.0d
+depth_min,colorBarMinimum,-8000.0d
+depth_min,colorBarPalette,TopographyDepth
+depth_min,description,Minimum depth sampled.
+depth_min,ioos_category,Location
+depth_min,long_name,Depth
+depth_min,standard_name,depth
+depth_min,units,meters
+FWC_DS,*DATA_TYPE*,String
+FWC_DS,description,Full whole column (FWC) sampling or depth-stratified (DS) sampling
+FWC_DS,ioos_category,Unknown
+FWC_DS,long_name,FWC DS
+FWC_DS,units,unitless
+density,*DATA_TYPE*,double
+density,_FillValue,NaNd
+density,actual_range,7.9732E-4d,14125.0d
+density,description,Density of species sampled
+density,ioos_category,Physical Oceanography
+density,long_name,Density
+density,units,count per meter cubed
+time,*DATA_TYPE*,String
+time,_CoordinateAxisType,Time
+time,actual_range,2012-06-11T14:10:00Z\n
+time,axis,T
+time,description,Date/Time (UTC) ISO formatted
+time,ioos_category,Time
+time,long_name,ISO Date Time UTC
+time,standard_name,time
+time,time_origin,01-JAN-1970 00:00:00
+time,units,yyyy-MM-dd'T'HH:mm:ssZ
+
+*END_METADATA*
