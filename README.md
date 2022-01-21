@@ -26,19 +26,7 @@ IOOS provided NANOOS with special funding to integrate regional biological data 
 - Great reference from Stace Beaulieu: "the best published example that I know of for getting zooplankton data into OBIS, using the 3 tables (event, occurrence, emof):" [Mortelmans, Jonas, et al. (2019) LifeWatch observatory data: Zooplankton
 observations in the Belgian part of the North Sea. Geoscience Data Journal, 6: 76–84. DOI:10.1002/gdj3.68](https://doi.org/10.1002/gdj3.68). The dataset itself is described (hosted?) at https://doi.org/10.14284/329
 
-### Submitting request to add new life stage terms to S11 NERC vocab. See my Slack SMBD thread (~12/20). Relevant links (from 12/20/21):
 
-- https://github.com/nvs-vocabs/OBISVocabs/issues/10
-- https://github.com/nvs-vocabs/S11/issues/14
-- http://www.marinespecies.org/traits/wiki/Traits:Lifestage
-- https://registry.gbif.org/vocabulary/LifeStage/concepts
-- https://www.bing.com/search?q=furcilia+conditions+stages&qs=n&Search+%7b0%7d+for+%7b1%7d%2cSearch+work+for+%7b0%7d&msbsrank=0_1__0&sp=-1&pq=furcilia+conditions+stages&sc=1-26&sk=&cvid=84B4F3D1C1B44893A9AC799AF9F68367&first=8&FORM=PORE
-- https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/nauplii; see especially the text in G.A. Tarling, 2010, Population Dynamics of Northern Krill (Meganyctiphanes norvegica Sars), Adv. Marine Bio., https://doi.org/10.1016/B978-0-12-381308-4.00003-0
-- https://en.wikipedia.org/wiki/Crustacean_larva
-- https://aslopubs.onlinelibrary.wiley.com/doi/pdf/10.4319/lo.1981.26.2.0235
-- http://species-identification.org/species.php?species_group=euphausiids&id=35
-- http://species-identification.org/species.php?species_group=euphausiids&selected=definitie&menuentry=woordenlijst&record=furcilia%20phase
-- http://species-identification.org/species.php?species_group=euphausiids&selected=definitie&menuentry=woordenlijst&record=stage
-- https://www.bing.com/search?q=crustacean+life+cycle&cvid=4d9dfb12312e43ec86c534b40b338d2c&aqs=edge.0.0j69i57j0l5j69i60.4848j0j1&pglt=43&FORM=ANNAB1&PC=LCTS
-- https://www.researchgate.net/publication/328018769_Crustacean_Life_Cycles-Developmental_Strategies_and_Environmental_Adaptations
-- `Olesen2018 - Crustacean life cycles.pdf`
+## Remaining tasks
+
+- [Submit request to add new life stage terms to S11 NERC vocab](https://github.com/nanoos-pnw/obis-keisterhczoop/issues/1)
