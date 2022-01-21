@@ -16,7 +16,7 @@ IOOS provided NANOOS with special funding to integrate regional biological data 
 
 ## Data source
 
-- Statement and sample url & code about how to get the data from BCO-DMO ERDDAP as csv: https://erddap.bco-dmo.org/erddap/tabledap/bcodmo_dataset_682074.csv?station%2Clatitude%2Clongitude%2Cday_night%2Cspecies%2Cdate%2Ctime_start%2Clife_history_stage%2Csample_code%2Cmesh_size%2Cdepth_max%2Cdepth_min%2CFWC_DS%2Cdensity%2Ctime
+- Link to obtain the data from the BCO-DMO ERDDAP server in CSV format: https://erddap.bco-dmo.org/erddap/tabledap/bcodmo_dataset_682074.csv
 - For convenience, I pre-fetched the dataset in January 2020 using that request url, and stored the csv file locally in the `sourcedata` folder: `bcodmo_dataset_682074_data.csv"`
 
 ## Other
