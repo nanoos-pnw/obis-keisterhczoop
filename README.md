@@ -17,7 +17,7 @@ IOOS provided NANOOS with special funding to integrate regional biological data 
 ## Data source
 
 - Link to obtain the data from the BCO-DMO ERDDAP server in CSV format: https://erddap.bco-dmo.org/erddap/tabledap/bcodmo_dataset_682074.csv
-- For convenience, I pre-fetched the dataset in January 2020 using that request url, and stored the csv file locally in the `sourcedata` folder: `bcodmo_dataset_682074_data.csv"`
+- For convenience, I pre-fetched the dataset in January 2020 using that request url, and stored the csv file locally in the `sourcedata` folder: [bcodmo_dataset_682074_data.csv](https://github.com/nanoos-pnw/obis-keisterhczoop/blob/main/sourcedata/bcodmo_dataset_682074_data.csv)
 
 ## Other
 
