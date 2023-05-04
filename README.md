@@ -1,6 +1,6 @@
 # README
 
-Alignment of Julie Keister's Hood Canal Zooplankton dataset to the OBIS-ENV-DATA Darwin Core standard for submission to OBIS and the MBON Data Portal. University of Washington Pelagic Hypoxia Hood Canal project, Zooplankton dataset. This dataset was previously published to BCO-DMO. We obtain the dataset from the BCO-DMO ERDDAP server.
+Alignment of Julie Keister's Hood Canal Zooplankton dataset to the OBIS-ENV-DATA Darwin Core standard for submission to OBIS and the MBON Data Portal. University of Washington Pelagic Hypoxia Hood Canal project, Zooplankton dataset. This dataset was previously published to BCO-DMO in a format submitted by the PI that's not aligned to Darwin Core. The dataset we obtain from the BCO-DMO ERDDAP server is the starting point for the Darwin Core alignment.
 
 ## Background
 

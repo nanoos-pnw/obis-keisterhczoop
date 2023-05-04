@@ -11,9 +11,10 @@ dependencies:
   - xarray
   - scipy
   - requests
-  - xlrd
+  # - xlrd
   - openpyxl
   # Bio packages
+  - pyobis
   - python-dwca-reader
   - pyworms
   - pip
@@ -21,4 +22,3 @@ dependencies:
     - metapype
     - pygbif    # https://github.com/gbif/pygbif
     - pytaxize  # https://github.com/sckott/pytaxize
-    # - git+https://github.com/gbif/pyobis.git
