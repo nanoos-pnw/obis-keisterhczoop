@@ -21,7 +21,7 @@ Calanoida,urn:lsid:marinespecies.org:taxname:1100,Order,Animalia,Arthropoda,Cope
 Calanus pacificus,urn:lsid:marinespecies.org:taxname:196771,Species,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,Calanus,"Brodsky, 1948",CALANUS_PACIFICUS
 Callianassa californiensis,urn:lsid:marinespecies.org:taxname:465346,Species,Animalia,Arthropoda,Malacostraca,Decapoda,Callianassidae,Callianassa,"Dana, 1854",CALLIANASSA_CALIFORNIENSIS
 Romaleon antennarium,urn:lsid:marinespecies.org:taxname:440397,Species,Animalia,Arthropoda,Malacostraca,Decapoda,Cancridae,Romaleon,"(Stimpson, 1856)",CANCER_ANTENNARIUS
-Metacarcinus gracilis,urn:lsid:marinespecies.org:taxname:440387,Species,Animalia,Arthropoda,Malacostraca,Decapoda,Cancridae,Metacarcinus,"(Dana, 1852)",CANCER_GRACILIS
+Cancer gracilis,urn:lsid:marinespecies.org:taxname:452220,Species,Animalia,Arthropoda,Malacostraca,Decapoda,Cancridae,Cancer,"Dana, 1852",CANCER_GRACILIS
 Cancer magister,urn:lsid:marinespecies.org:taxname:452271,Species,Animalia,Arthropoda,Malacostraca,Decapoda,Cancridae,Cancer,"Dana, 1852",CANCER_MAGISTER
 Cancer,urn:lsid:marinespecies.org:taxname:106876,Genus,Animalia,Arthropoda,Malacostraca,Decapoda,Cancridae,Cancer,"Linnaeus, 1758",CANCER_PROD/OREG
 Cancridae,urn:lsid:marinespecies.org:taxname:106749,Family,Animalia,Arthropoda,Malacostraca,Decapoda,Cancridae,,"Latreille, 1802",CANCRIDAE
@@ -39,6 +39,7 @@ Clytia,urn:lsid:marinespecies.org:taxname:117030,Genus,Animalia,Cnidaria,Hydrozo
 Copepoda,urn:lsid:marinespecies.org:taxname:1080,Class,Animalia,Arthropoda,Copepoda,,,,"Milne Edwards, 1840",COPEPODA
 Corophium,urn:lsid:marinespecies.org:taxname:101489,Genus,Animalia,Arthropoda,Malacostraca,Amphipoda,Corophiidae,Corophium,"Latreille, 1806",COROPHIUM
 Corycaeus anglicus,urn:lsid:marinespecies.org:taxname:149847,Species,Animalia,Arthropoda,Copepoda,Cyclopoida,Corycaeidae,Corycaeus,"Lubbock, 1857",CORYCAEUS_ANGLICUS
+Brachyura,urn:lsid:marinespecies.org:taxname:106673,Infraorder,Animalia,Arthropoda,Malacostraca,Decapoda,,,"Latreille, 1802",CRABS
 Crangonidae,urn:lsid:marinespecies.org:taxname:106782,Family,Animalia,Arthropoda,Malacostraca,Decapoda,Crangonidae,,"Haworth, 1825",CRANGONIDAE
 Cumacea,urn:lsid:marinespecies.org:taxname:1137,Order,Animalia,Arthropoda,Malacostraca,Cumacea,,,"Krøyer, 1846",CUMACEA
 Cyanea capillata,urn:lsid:marinespecies.org:taxname:135301,Species,Animalia,Cnidaria,Scyphozoa,Semaeostomeae,Cyaneidae,Cyanea,"(Linnaeus, 1758)",CYANEA_CAPILLATA
@@ -52,6 +53,7 @@ Euphausia pacifica,urn:lsid:marinespecies.org:taxname:237851,Species,Animalia,Ar
 Euphausiidae,urn:lsid:marinespecies.org:taxname:110671,Family,Animalia,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,,"Dana, 1850",EUPHAUSIIDAE
 Evadne,urn:lsid:marinespecies.org:taxname:106267,Genus,Animalia,Arthropoda,Branchiopoda,Onychopoda,Podonidae,Evadne,"Lovén, 1836",EVADNE
 Fabia subquadrata,urn:lsid:marinespecies.org:taxname:445132,Species,Animalia,Arthropoda,Malacostraca,Decapoda,Pinnotheridae,Fabia,"Dana, 1851",FABIA_SUBQUADRATA
+Actinopterygii,urn:lsid:marinespecies.org:taxname:10194,Gigaclass,Animalia,Chordata,,,,,,FISH
 Fritillaria,urn:lsid:marinespecies.org:taxname:103358,Genus,Animalia,Chordata,Appendicularia,Copelata,Fritillariidae,Fritillaria,"Fol, 1872",FRITILLARIA
 Gammaridea,urn:lsid:marinespecies.org:taxname:1207,Suborder,Animalia,Arthropoda,Malacostraca,Amphipoda,,,"Latreille, 1802",GAMMARIDEA
 Gastropoda,urn:lsid:marinespecies.org:taxname:101,Class,Animalia,Mollusca,Gastropoda,,,,"Cuvier, 1795",GASTROPODA
@@ -68,6 +70,7 @@ Hemicyclops,urn:lsid:marinespecies.org:taxname:394447,Genus,Animalia,Arthropoda,
 Hemigrapsus oregonensis,urn:lsid:marinespecies.org:taxname:444778,Species,Animalia,Arthropoda,Malacostraca,Decapoda,Varunidae,Hemigrapsus,"(Dana, 1851)",Hemigrapsus_oregonensis
 Hyperia,urn:lsid:marinespecies.org:taxname:101796,Genus,Animalia,Arthropoda,Malacostraca,Amphipoda,Hyperiidae,Hyperia,"Latreille, 1823",Hyperia
 Isopoda,urn:lsid:marinespecies.org:taxname:1131,Order,Animalia,Arthropoda,Malacostraca,Isopoda,,,"Latreille, 1816",ISOPODA
+Cnidaria,urn:lsid:marinespecies.org:taxname:1267,Phylum,Animalia,Cnidaria,,,,,"Hatschek, 1888",JELLYFISHES
 Larvacea,urn:lsid:marinespecies.org:taxname:17446,Class,Animalia,Chordata,Larvacea,,,,,LARVACEA
 Lensia,urn:lsid:marinespecies.org:taxname:135365,Genus,Animalia,Cnidaria,Hydrozoa,Siphonophorae,Diphyidae,Lensia,"Totton, 1932",LENSIA
 Leptomedusae,urn:lsid:marinespecies.org:taxname:151689,Order,Animalia,Cnidaria,Hydrozoa,Leptomedusae,,,"Haeckel, 1866",LEPTOMEDUSAE
@@ -119,6 +122,7 @@ Pacifacanthomysis nephrophthalma,urn:lsid:marinespecies.org:taxname:226746,Speci
 Pagurus beringanus,urn:lsid:marinespecies.org:taxname:366657,Species,Animalia,Arthropoda,Malacostraca,Decapoda,Paguridae,Pagurus,"(Benedict, 1892)",Pagurus_beringanus
 Rathkea,urn:lsid:marinespecies.org:taxname:117211,Genus,Animalia,Cnidaria,Hydrozoa,Anthoathecata,Rathkeidae,Rathkea,"Brandt, 1837",RATHKEA
 Scolecithricella minor,urn:lsid:marinespecies.org:taxname:104811,Species,Animalia,Arthropoda,Copepoda,Calanoida,Scolecitrichidae,Scolecithricella,"(Brady, 1883)",SCOLECITHRICELLA_MINOR
+Dendrobranchiata,urn:lsid:marinespecies.org:taxname:106669,Suborder,Animalia,Arthropoda,Malacostraca,Decapoda,,,"Spence Bate, 1888",SHRIMP
 Siphonophora,urn:lsid:marinespecies.org:taxname:254409,Order,Animalia,Cnidaria,Hydrozoa,Siphonophora,,,"Eschscholtz, 1829",SIPHONOPHORA
 Spionidae,urn:lsid:marinespecies.org:taxname:913,Family,Animalia,Annelida,Polychaeta,Spionida,Spionidae,,"Grube, 1850",SPIONIDAE
 Tanaidacea,urn:lsid:marinespecies.org:taxname:1133,Order,Animalia,Arthropoda,Malacostraca,Tanaidacea,,,"Dana, 1849",TANAIDACEA
