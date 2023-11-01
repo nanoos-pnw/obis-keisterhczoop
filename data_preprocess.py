@@ -5,7 +5,7 @@
 # 
 # University of Washington Pelagic Hypoxia Hood Canal project, Zooplankton dataset.
 # 
-# 3/27-25,20 2023
+# 10/31, 3/27-25,20 2023
 
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -15,14 +15,14 @@ import pandas as pd
 
 
 def read_and_parse_sourcedata():
+    """
+    Read, parse and pre-process source csv data.
+    """
+
+    # ## Read the csv file
+
     data_pth = Path(".")
-
-    # ## Pre-process data from csv for Event table
-
-    # ### Read the csv file
-
     sourcecsvdata_pth = data_pth / "sourcedata" / "bcodmo_dataset_682074_data.csv"
-
     source_df = pd.read_csv(sourcecsvdata_pth, skiprows=[1])
 
 
@@ -48,7 +48,6 @@ def read_and_parse_sourcedata():
     # Create (replace) the `time` column based on `date`, `time_start`, my custom `pdt` timezone, and `strftime`
 
     pdt = timezone(timedelta(hours=-7), "PDT")
-
     source_df["time"] = pd.to_datetime(
         source_df["date"].astype(str) + source_df["time_start"], 
         format="%Y%m%d%H:%M"
@@ -120,4 +119,32 @@ def read_and_parse_sourcedata():
                                 axis='columns')
     source_df.drop(columns='token2', inplace=True)
 
-    return source_df
+    
+    # ## Address "duplicate" records with different density values
+    
+    # Unique combinations of these three columns correspond to what should be a unique record.
+    cols = ['sample_code', 'species', 'life_history_stage']
+
+    # Identify the records that are duplicated, as the unique combination of `cols` columns. 
+    # This is `duplicated_df`. `all_dups_source_df` then stores all the records matching 
+    # these duplicated records (x2) but now adding the `density` column.
+    duplicated_df = source_df[source_df[cols].duplicated()][cols]
+    all_dups_source_df = source_df[cols + ['density']].merge(duplicated_df, on=cols, how="inner")
+
+    # Calculate mean density for each pair of duplicated records.
+    mean_density_df = all_dups_source_df.groupby(cols).mean().reset_index().rename(columns={"density":"density_avg"})
+
+    # Merge the average-density dataframe with `source_df`. The net effect is to add a new column, `density_avg`
+    source_meandensity_df = source_df.merge(mean_density_df, on=cols, how="left")
+
+    #  The `sel` approach below is based on matching multi-indices in the two dataframes, using the 3-column `cols` set. 
+    # (from https://stackoverflow.com/questions/54006298/select-rows-of-a-dataframe-based-on-another-dataframe-in-python)
+    # For the 34 duplicated records only, assign `density_avg` to the `density` column. Then clean up: drop the 
+    # `density_avg` column and, finally, drop what are now true duplicates (ie, 17 records). 
+    # `source_final_df` is the final, de-duplicated, density-averaged dataframe.
+    sel = source_meandensity_df.set_index(cols).index.isin(mean_density_df.set_index(cols).index)
+    source_meandensity_df.loc[sel, 'density'] = source_meandensity_df[sel]['density_avg']
+
+    source_final_df = source_meandensity_df.drop(columns=["density_avg"]).drop_duplicates()
+
+    return source_final_df
