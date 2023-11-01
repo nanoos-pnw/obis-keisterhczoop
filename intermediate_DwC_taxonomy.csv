@@ -17,7 +17,7 @@ Cirripedia,urn:lsid:marinespecies.org:taxname:1082,Subclass,Animalia,Arthropoda,
 Bivalvia,urn:lsid:marinespecies.org:taxname:105,Class,Animalia,Mollusca,Bivalvia,,,,"Linnaeus, 1758",BIVALVIA
 Brachyura,urn:lsid:marinespecies.org:taxname:106673,Infraorder,Animalia,Arthropoda,Malacostraca,Decapoda,,,"Latreille, 1802",BRACHYURA
 Bryozoa,urn:lsid:marinespecies.org:taxname:146142,Phylum,Animalia,Bryozoa,,,,,,BRYOZOAN
-Calanoida,urn:lsid:marinespecies.org:taxname:1100,Order,Animalia,Arthropoda,Copepoda,Calanoida,,,"Sars G. O., 1903",CALANOIDA
+Calanoida,urn:lsid:marinespecies.org:taxname:1100,Order,Animalia,Arthropoda,Copepoda,Calanoida,,,"Sars G.O., 1903",CALANOIDA
 Calanus pacificus,urn:lsid:marinespecies.org:taxname:196771,Species,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,Calanus,"Brodsky, 1948",CALANUS_PACIFICUS
 Callianassa californiensis,urn:lsid:marinespecies.org:taxname:465346,Species,Animalia,Arthropoda,Malacostraca,Decapoda,Callianassidae,Callianassa,"Dana, 1854",CALLIANASSA_CALIFORNIENSIS
 Romaleon antennarium,urn:lsid:marinespecies.org:taxname:440397,Species,Animalia,Arthropoda,Malacostraca,Decapoda,Cancridae,Romaleon,"(Stimpson, 1856)",CANCER_ANTENNARIUS
