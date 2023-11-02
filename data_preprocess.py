@@ -83,9 +83,50 @@ def read_and_parse_sourcedata():
 
 
     # ## Perform updates to species (taxa), life_history_stage and density
+    # Specific to certain sample_code entries, not across the board.
+    # Focused on Jellyfishes, mites and one sinophora record
+    
+    # If the "new" lhs or density value in Amanda's spreadsheet is the same as the old one,
+    # I've entered None rather than repeating the value, for clarity for intent.
+    jellyfishes_mites_updates = [
+        dict(old=("20120614DBDm2_200", "JELLYFISHES", "Medusa"), new=("HYDROZOA", None, None)),
+        dict(old=("20120614DBDm4_200", "JELLYFISHES", "Unknown"), new=("HYDROZOA", "Medusa", None)),
+        dict(old=("20120712DBDm4_200", "JELLYFISHES", "Medusa"), new=("CALYCOPHORAE", "Gonophore", None)),
+        dict(old=("20120905DBDm4_200", "JELLYFISHES", "Medusa"), new=("HYDROZOA", None, None)),
+        dict(old=("20120905DBNm3_200", "JELLYFISHES", "Unknown"), new=("CALYCOPHORAE", "Gonophore", None)),
+        dict(old=("20120709UNDm3_200", "JELLYFISHES", "Medusa"), new=("CALYCOPHORAE", "Gonophore", None)),
+        dict(old=("20130930UNDm3_200", "MITES", "4;_CIV"), new=("MICROCALANUS", None, None)),
+        dict(old=("20120902UNiiNm1_200", "JELLYFISHES", "Medusa"), new=("HYDROZOA", None, None)),
+        dict(old=("20120902UNiiNm4_200", "JELLYFISHES", "Medusa"), new=("CALYCOPHORAE", "Bract", 23.52941)),
+        dict(old=("20121001UNNm3_200", "SIPHONOPHORA", "Nectophore"), new=("CALYCOPHORAE", "Gonophore", None)), 
+        dict(old=("20121001UNNm3_200", "JELLYFISHES", "Medusa"), new=("HYDROZOA", None, None)),
+    ]
+    # For ("20121001UNNm3_200", "SIPHONOPHORA", "Nectophore"), I changed from the original Medusa lhs 
+    # to Nectophore to account for the lhs change already executed in an earlier step.
+    # For ("20120614DBDm4_200", "JELLYFISHES", "Unknown") and
+    # ("20121001UNNm3_200", "JELLYFISHES", "Medusa"), replaced the assigned "HYDROZOA_Medusa" and 
+    # "HYDROMEDUSA", respectively, to "HYDROZOA" b/c those two entries don't resolved with pyworms
+    # (are not taxa names per se?)
+    # I also ommitted SIPHONOPHORA	Nectophore from Amanda's spreadsheet because, unlike all other entries
+    # in the "jellyfishes and mites" tab, the intent wasn't clear
+
+    for upd_record in jellyfishes_mites_updates:
+        old, new = upd_record["old"], upd_record["new"]
+        # select on the entries from the "old" tuple forming a set of unique combinations of
+        # sample_code, species and life_history_stage
+        sel = (
+            (source_df["sample_code"] == old[0])
+             & (source_df["species"] == old[1])
+             & (source_df["life_history_stage"] == old[2])
+        )
+        source_df.loc[sel, "species"] = new[0]
+        if new[1] is not None:
+            source_df.loc[sel, "life_history_stage"] = new[1]
+        if new[2] is not None:
+            source_df.loc[sel, "density"] = new[2]
 
 
-    # ## Parse `life_history_stage`
+    # ## Parse life_history_stage
 
     source_df[['lhs_0', 'lhs_1']] = pd.DataFrame(
         source_df.life_history_stage.str.split(';_').to_list(), 
