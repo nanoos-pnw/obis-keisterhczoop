@@ -5,7 +5,7 @@
 # 
 # University of Washington Pelagic Hypoxia Hood Canal project, Zooplankton dataset.
 # 
-# 10/31, 3/27-25,20 2023
+# 11/2, 10/31, 3/27-25,20 2023
 
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -30,7 +30,6 @@ def read_and_parse_sourcedata():
     # 
     # - Assign correct timezone (PDT, not UTC)
     # - Fill in missing `time_start`, by `sample_code`
-
     missing_times = {
         "20131003DBDm1_200": "14:11",
         "20130904HPNm1_200": "21:59",
@@ -41,12 +40,10 @@ def read_and_parse_sourcedata():
     }
 
     # Set the `time_start` strings for the `sample_code` entries in `missing_times`.
-
     for sample_code,time_start in missing_times.items():
         source_df.loc[source_df["sample_code"] == sample_code, "time_start"] = time_start
 
     # Create (replace) the `time` column based on `date`, `time_start`, my custom `pdt` timezone, and `strftime`
-
     pdt = timezone(timedelta(hours=-7), "PDT")
     source_df["time"] = pd.to_datetime(
         source_df["date"].astype(str) + source_df["time_start"], 
@@ -62,18 +59,30 @@ def read_and_parse_sourcedata():
     # 
     #   Yes, these are miscoded ("1, CI" should be "Cal1, calyptopis 1," and so on).
 
+    def _update_lhs_byspecies(species, lhs_updates):
+        """Modifies source_df in place, within the function"""
+        sel_species = source_df["species"].isin(species)
+        for old_lhs,new_lhs in lhs_updates.items():
+            source_df.loc[sel_species & source_df["life_history_stage"].str.startswith(old_lhs), "life_history_stage"] = new_lhs
+
     source_df["life_history_stage"].replace({"F1_0;_Furcilia_1_0_legs": "F10;_Furcilia_10"}, inplace=True)
 
-    sel_species = source_df["species"].isin(["EUPHAUSIA_PACIFICA", "THYSANOESSA"])
-
-    krill_bad_life_history_stages = {
+    krill_bad_lhs = {
         "1;_CI": "Cal1;_Calyptopis_1", 
         "2;_CII": "Cal2;_Calyptopis_2",
         "3;_CIII": "Cal3;_Calyptopis_3",
     }
+    _update_lhs_byspecies(["EUPHAUSIA_PACIFICA", "THYSANOESSA"], krill_bad_lhs)
 
-    for old_lhs,new_lhs in krill_bad_life_history_stages.items():
-        source_df.loc[sel_species & source_df["life_history_stage"].str.startswith(old_lhs), "life_history_stage"] = new_lhs
+    # Handle life stage correction SIPHONOPHORA corrections from Amanda
+    siphonophora_bad_lhs = {
+        "Medusa": "Nectophore", 
+        "Unknown": "Nectophore",
+    }
+    _update_lhs_byspecies(["SIPHONOPHORA"], siphonophora_bad_lhs)
+
+
+    # ## Perform updates to species (taxa), life_history_stage and density
 
 
     # ## Parse `life_history_stage`
