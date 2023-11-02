@@ -134,6 +134,29 @@ def read_and_parse_sourcedata():
     )
 
 
+    # ## Replace outdated/incorrect taxa with updated, corrected ones from Amanda
+
+    taxa_corrections_updates = {
+        "AETIDEUS_divergens": "AETIDEUS",
+        "ANTHOMEDUSAE": "ANTHOATHECATA",
+        "CALLIANASSA_CALIFORNIENSIS": "NEOTRYPAEA_CALIFORNIENSIS",
+        "CANCER_ANTENNARIUS": "CANCRIDAE",
+        "CANCER_PROD/OREG": "CANCRIDAE",
+        "CORYCAEUS_ANGLICUS": "DITRICHOCORYCAEUS_ANGLICUS",
+        "CLYTIA": "CLYTIA_GREGARIA",
+        "EUCHAETA_ELONGATA": "PARAEUCHAETA_ELONGATA",
+        "EUCHAETA": "PARAEUCHAETA ",
+        "LEPTOMEDUSAE": "LEPTOTHECATA",
+        "MICROCALANUS_PUSILLUS": "MICROCALANUS",
+        "OITHONA_SPINIROSTRIS": "OITHONA_ATLANTICA",
+        "ONCAEA_BOREALIS": "TRICONIA_BOREALIS",
+        "PARACALANUS_PARVUS": "PARACALANUS",
+        "PARATHEMISTO": "THEMISTO_PACIFICA",
+        "PORCELAIN_CRABS": "PORCELLANIDAE",
+    }
+    source_df["species"].replace(taxa_corrections_updates, inplace=True)
+
+
     # ### Examine sample_code characteristics, extra characters
 
     # source_df.sample_code.str.len().value_counts()
@@ -141,17 +164,20 @@ def read_and_parse_sourcedata():
     # source_df[source_df.sample_code.str.len() == 18].head()
 
 
-    # ### Extract net_code and "extra token" from `sample_code`
+    # ### Extract net_code and "extra token" from sample_code
     # 
     # - Retain only ones that are not already found among the existing dataframe columns.
-    # - Example: "20120611UNDm2_200". Dataset description entry for `sample_code`: "PI issued sample ID; sampling date + Station + D (day) or N (night) + Net code (e.g. m1) \_mesh"
-    # - The upper case letter character before the "m" is D or N (Day or Night). **In a few cases there's an additional character found before the D/N character, but its meaning is not described in the `sample_code` description**
+    # - Example: "20120611UNDm2_200". Dataset description entry for 
+    #   `sample_code`: "PI issued sample ID; sampling date + Station + D (day) or N (night) + Net code (e.g. m1) \_mesh"
+    # - The upper case letter character before the "m" is D or N (Day or Night). **In a few cases there's an 
+    #   additional character found before the D/N character, but its meaning is not described in the `sample_code` description**
     # - Ultimately, try to pull out or create a profile code and profile depth interval code, if appropriate?
 
     # Parsing steps:
     # - split the new `sample_code` on the "_" delimiter, create two new columns, `token1` and `mesh_size`
     # - From `token1` extract `token2`, the characters between `station_code` and the "_" delimiter
-    # - parse `token2`: split on the letter "m", into `token3` and `net_code`; then create `token4` from `token3` by removing the D/N character. `token4` will be empty in most cases, and will be renamed to `extra_sample_token`
+    # - parse `token2`: split on the letter "m", into `token3` and `net_code`; then create `token4` from `token3` by
+    #   removing the D/N character. `token4` will be empty in most cases, and will be renamed to `extra_sample_token`
 
     def split_token2(token2):
         token3, net_code = token2.split('m')
