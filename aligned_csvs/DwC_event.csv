@@ -1,4 +1,4 @@
-eventID,eventRemarks,parentEventID,eventDate,locationID,locality,decimalLatitude,decimalLongitude,footprintWKT,geodeticDatum,waterBody,countryCode,minimumDepthInMeters,maximumDepthInMeters,samplingProtocol
+eventID,eventType,parentEventID,eventDate,locationID,locality,decimalLatitude,decimalLongitude,footprintWKT,geodeticDatum,waterBody,countryCode,minimumDepthInMeters,maximumDepthInMeters,samplingProtocol
 UWPHHCZoop_CB975,cruise,,2012-06-11T14:10:00-0700,,,47.531,-123.016,"POLYGON ((-123.117 47.378, -123.125 47.404, -122.807 47.812, -123.117 47.378))",EPSG:4386,"Hood Canal, Puget Sound",US,0.0,145.0,
 UWPHHCZoop_CB979,cruise,,2012-07-09T16:40:00-0700,,,47.531,-123.016,"POLYGON ((-123.117 47.378, -123.125 47.404, -122.807 47.812, -123.117 47.378))",EPSG:4386,"Hood Canal, Puget Sound",US,0.0,158.0,
 UWPHHCZoop_CB982,cruise,,2012-08-06T15:35:00-0700,,,47.531,-123.016,"POLYGON ((-123.117 47.378, -123.125 47.404, -122.807 47.812, -123.117 47.378))",EPSG:4386,"Hood Canal, Puget Sound",US,0.0,165.0,

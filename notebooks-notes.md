@@ -1,6 +1,6 @@
 # Data processing code
 
-5/9/2023. Emilio Mayorga
+2023-09-20. Emilio Mayorga
 
 ## Summary of the aligned files and processing code
 
@@ -10,7 +10,7 @@ We use Python code consisting of one module and four Jupyter notebooks to transf
 
 The resulting DwC eMoF files are found in the `aligned_csvs` directory:
 
-- `DwC_event.csv`: Event file. Each row defines a sampling "event", where each event is described with the event type (under `eventRemarks`), temporal and spatial information (including depth), a unique ID, and its relationship to a "parent" event if applicable. Three event types are defined: "cruise", "stationVisit" (with a cruise parent) and "sample" (with a stationVisit parent). A sample event is the sample collection from each net deployment, where the `eventID` is taken directly from the `sample_code` column in the original data file and a `samplingProtocol` description is included. 
+- `DwC_event.csv`: Event file. Each row defines a sampling "event", where each event is described with the event type (under `eventType`), temporal and spatial information (including depth), a unique ID, and its relationship to a "parent" event if applicable. Three event types are defined: "cruise", "stationVisit" (with a cruise parent) and "sample" (with a stationVisit parent). A sample event is the sample collection from each net deployment, where the `eventID` is taken directly from the `sample_code` column in the original data file and a `samplingProtocol` description is included. 
   - There are 10 cruises, 64 station visits and 271 samples.
 - `DwC_occurrence.csv`: Occurrence file. Each row defines a unique taxonomic identification and associated sex and life stage determinations, if present. Each occurrence entry is associated with a "sample" event in `DwC_event.csv` via the `eventID` code. The taxonomic description includes the associated taxonomic match up and details from WoRMS (World Register of Marine Species) based on the `species` column in the original data file, plus 10 manual matchups when an automatic matchup could not be made.
   - There are 6871 occurrences.
