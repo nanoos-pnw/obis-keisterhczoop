@@ -1,6 +1,6 @@
 {
     "iso8601_format": "%Y-%m-%dT%H:%M:%S%z",
-    "CRS": "EPSG:4386",
+    "CRS": "EPSG:4326",
     "datasetcode": "UWPHHCZoop",
     "datasetcode_descr": "Univ. Washington Pelagic Hypoxia Hood Canal, Zooplankton",
     "cruises": {
