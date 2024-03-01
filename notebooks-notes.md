@@ -1,6 +1,6 @@
 # Data processing steps and code
 
-2024-02-29
+2024-03-01
 
 ## Summary of the aligned files and processing code
 
@@ -11,18 +11,18 @@ We used Python code consisting of one module, four Jupyter notebooks and a JSON 
 The resulting DwC files are found in the [`aligned_csvs`](https://github.com/nanoos-pnw/obis-keisterhczoop/blob/main/aligned_csvs) directory:
 
 - `DwC_event.csv`: Event file. Each row defines a sampling "event", where each event is described with the event type (under `eventType`), temporal and spatial information (including depth), a unique ID, and its relationship to a "parent" event if applicable. Three event types are defined: "cruise", "stationVisit" (with a cruise parent) and "sample" (with a stationVisit parent). A sample event is the sample collection from each net deployment, where the `eventID` is taken directly from the `sample_code` column in the original data file and a `samplingProtocol` description is included. 
-  - There are 10 cruises, 64 station visits and 271 samples.
+  - There are 345 records: 10 cruises, 64 station visits and 271 samples.
 - `DwC_occurrence.csv`: Occurrence file. Each row defines a unique taxonomic identification and associated sex and life stage determinations, if present. Each occurrence entry is associated with a "sample" event in `DwC_event.csv` via the `eventID` code. The taxonomic description includes the associated taxonomic match up and details from WoRMS (World Register of Marine Species) based on the `species` column in the original data file, plus a few manual matchups when an automatic matchup could not be made.
-  - There are 6871 occurrences.
-- `DwC_emof.csv`: eMoF file. The eMoF file provides a flexible and open-ended mechanism for storing additional information about the dataset not found in the Event and Occurrence files, or to provide additional details about information provided in those two files. Each eMoF type is associated with an external community vocabulary references specifying the measurement type and, when appropriate, the measurement unit. 4 eMoF types are included:
-  - density measurements: 6901 entries
+  - There are 6,853 occurrences.
+- `DwC_emof.csv`: eMoF file. The eMoF file provides a flexible and open-ended mechanism for storing additional information about the dataset not found in the Event and Occurrence files, or to provide additional details about information provided in those two files. There are 7,666 eMoF records, each classified by a specific type (`measurementType`). Each eMoF type is associated with an external community vocabulary references specifying the measurement type and, when appropriate, the measurement unit. 4 eMoF types are included:
+  - density measurements: 6,853 entries
   - multinet sampling descriptions: 271 entries
   - Sampling method descriptions: 271 entries
   - Sampling net mesh size descriptions: 271 entries
 
 ### Intermediate WoRMS taxonomic match-up file
 
-The processing code creates two intermediate files that are not part of the final DwC-aligned output files, `intermediate_DwC_occurrence_life_history_stage.csv` and `intermediate_DwC_taxonomy.csv`, found at the [root level of this repository](https://github.com/nanoos-pnw/obis-keisterhczoop/). They are used as temporary information passed from one Jupyter notebook to another, or within the same notebook. `intermediate_DwC_taxonomy.csv` contains the taxonomic match-up between the original `species` entry and the corresponding, fully fleshed out WoRMS information. Currently it contains 136 entries, where 2 of those are different, original `species` entries ("Decapoda" and "SHRIMP") matched to the same WoRMS taxon (`Decapoda`).
+The processing code creates two intermediate files that are not part of the final DwC-aligned output files, `intermediate_DwC_occurrence_life_history_stage.csv` and `intermediate_DwC_taxonomy.csv`, found at the [root level of this repository](https://github.com/nanoos-pnw/obis-keisterhczoop/). They are used as temporary information passed from one Jupyter notebook to another, or within the same notebook. `intermediate_DwC_taxonomy.csv` contains the taxonomic match-up between the original `species` entry and the corresponding, fully fleshed out WoRMS information. There are 130 taxonomy records.
 
 ### Processing code
 
